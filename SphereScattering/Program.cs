@@ -155,7 +155,7 @@ namespace SphereScattering
             float scatterAlbedoRnd = random();
             float gRnd = random();
 
-            float density = pow(densityRnd, 2) * 300; // densities varies from 0 to 300
+            float density = pow(densityRnd, 4) * 300; // densities varies from 0 to 300 concentrated at 0.
             float scatterAlbedo = min(1, 1.000001f - pow(scatterAlbedoRnd, 6)); // transform the albedo testing set to vary really slow close to 1.
             float g = clamp(gRnd * 2 - 1, -0.999f, 0.999f); // avoid singular cases abs(g)=1
 
